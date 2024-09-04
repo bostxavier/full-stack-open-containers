@@ -1,0 +1,5 @@
+docker container ls -a
+docker start -i elastic_gauss
+apt-get update
+apt-get -y install nano
+exit

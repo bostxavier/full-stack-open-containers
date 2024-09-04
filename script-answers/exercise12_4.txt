@@ -1,0 +1,5 @@
+docker start -i elastic_gauss
+apt-get -y install curl
+curl -sL https://deb.nodesource.com/setup_20.x | bash
+node /usr/src/app/index.js
+exit
