@@ -1,8 +1,5 @@
-.dockerignore
+dockerignore
 .gitignore
 node_modules
 dev.Dockerfile
 Dockerfile
-mongo_data
-redis_data
-.env
