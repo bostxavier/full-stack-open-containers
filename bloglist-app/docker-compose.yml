@@ -1,0 +1,18 @@
+services:
+  backend:
+    image: bloglist-backend
+    build:
+      context: ./bloglist-backend
+      dockerfile: Dockerfile
+    env_file: ./bloglist-backend/.env
+    container_name: bloglist-app-backend
+  frontend:
+    image: bloglist-frontend
+    build:
+      context: ./bloglist-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    container_name: bloglist-app-frontend

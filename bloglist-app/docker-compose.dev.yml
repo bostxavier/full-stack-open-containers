@@ -1,6 +1,6 @@
 services:
   frontend:
-    image: bloglist-frontend
+    image: bloglist-frontend-dev
     build:
       context: ./bloglist-frontend
       dockerfile: dev.Dockerfile
@@ -9,8 +9,9 @@ services:
       - /usr/src/app/node_modules
     environment:
       - VITE_BACKEND_URL=http://localhost:8080/api
+    container_name: bloglist-app-frontend-dev
   backend:
-    image: bloglist-backend
+    image: bloglist-backend-dev
     build:
       context: ./bloglist-backend
       dockerfile: dev.Dockerfile
@@ -19,12 +20,13 @@ services:
       - /usr/src/app/node_modules
     env_file:
       - ./bloglist-backend/.env
+    container_name: bloglist-app-backend-dev
   nginx:
     image: nginx:1.20.1
     volumes:
       - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
     ports:
       - 8080:80
-    container_name: reverse-proxy
+    container_name: reverse-proxy-dev
     depends_on:
       - frontend
