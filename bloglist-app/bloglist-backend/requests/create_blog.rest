@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGxhcyIsImlkIjoiNjZlMDExNzExZjdmZDEyYmM3OTQzYjdiIiwiaWF0IjoxNzI1OTYwODM2fQ._Rg3SoEL1YY7wyt1lktIu90LI5OAoo1TZN9osBUd6EI
+
+{
+  "title": "Comment configurer et utiliser efficacement l’historique bash",
+  "author": "Alexis Madrzejewski",
+  "url": "https://blog.madrzejewski.com/astuce-historique-bash-linux",
+  "likes": 0
+}
